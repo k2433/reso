@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+        <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div id="kirjaudu" class="box"></div>
+
+        <script type="text/babel">
+            
+    var LoginForm = React.createClass({
+       render: function(){
+            return (
+                <form>
+                    <h3>Kirjaudu sisään</h3>
+                    <input type="text" name="user" placeholder="Käyttäjätunnus"></input><br></br><br></br>
+                    <input type="password" name="passwd" placeholder="Salasana"></input><br></br><br></br>
+                    <button name="login">Kirjaudu<i></i><i></i></button>
+                    <button name="cancel">Peruuta</button>
+                </form>
+            );
+       }
+    });
+
+            ReactDOM.render(
+                // Kirjoita pelkästään tähän ohjelmakoodi, joka tuottaa <div id="ratkaisu">-elementtiin
+                // saman lopputuloksen kuin <div id="malli">-elementissä on
+                // Käytä hyväksi määriteltyä muuttujaa kalevalaText
+                    <LoginForm />,
+                    document.getElementById('kirjaudu')  
+            );
+        </script>
+
+    </body>
+</html>
